@@ -11,7 +11,7 @@
 用原生js实现的ajax从服务器获取到数据展示：  
 ![](./static/images/banks.png)  
 
-canvas画出的还款数据分析图：  
+canvas画出的还款数据分析图：   
 ![](./static/images/canvas.png)
 
 
