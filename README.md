@@ -8,6 +8,14 @@
 后面在用原生JavaScript实现ajax的过程中，发现不支持跨域访问，
 因此引入node.js服务器
 
+用原生js实现的ajax从服务器获取到数据展示：  
+![](./static/images/banks.png)  
+
+canvas画出的还款数据分析图：  
+![](./static/images/canvas.png)
+
+
+
 
 
 
