@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "name": "建设银行",
+      "url": "http://www.ccb.com/cn/home/indexv3.html"
+    },
+    {
+      "name": "中国工商银行",
+      "url": "http://www.icbc.com.cn/icbc/"
+    },
+    {
+      "name": "中国银行",
+      "url": "http://www.boc.cn/"
+    },
+    {
+      "name": "中国招商银行",
+      "url": "http://www.cmbchina.com/"
+    }
+  ]
+}

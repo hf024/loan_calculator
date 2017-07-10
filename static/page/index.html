@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript实现的贷款计算器</title>
+    <link type="text/css" rel="stylesheet" href="../css/calculate.css">
+</head>
+<body>
+<div id="wrapper">
+    <div id="left-wrapper">
+        <table>
+            <tr>
+                <th>贷款数据</th>
+                <td></td>
+            </tr>
+            <tbody>
+            <tr>
+                <td>贷款总额(&yen;):</td>
+                <td>
+                    <input type="text" id="amount" value="10000" onchange="cal.calculate();">&nbsp;万元
+                </td>
+            </tr>
+            <tr>
+                <td>按揭年数:</td>
+                <td>
+                    <input type="number" id="years" value="20" max='30' onchange="cal.calculate();">&nbsp;年
+                </td>
+            </tr>
+            <tr>
+                <td>贷款年利率:</td>
+                <td>
+                    <select id="interest-selector" onchange="cal.getInterest();">
+                        <option value="6.37">2017年4月1日基准利率上浮（1.3倍）</option>
+                        <option value="5.88">2017年4月1日基准利率上浮（1.2倍）</option>
+                        <option value="5.39">2017年4月1日基准利率上浮（1.1倍）</option>
+                        <option value="4.9" selected>2017年4月1日基准利率</option>
+                        <option value="4.655">2017年4月1日基准利率下浮（9.5折）</option>
+                        <option value="4.41">2017年4月1日基准利率下浮（9折）</option>
+                        <option value="4.165">2017年4月1日基准利率下浮（8.5折）</option>
+                        <option value="3.92">2017年4月1日基准利率下浮（8折）</option>
+                    </select>
+                    <br/>
+                    <input type="text" id="interest" value="4.9" onchange="cal.calculate();">&nbsp;%
+                </td>
+            </tr>
+            <tr>
+                <td>还款方式</td>
+                <td>
+                    <input type="radio" name="payment-type" value="1" checked onclick="cal.calculate();">等额本息
+                    <input type="radio" name="payment-type" value="2" onclick="cal.calculate();">等额本金
+                </td>
+            </tr>
+            <tr><td></td><td></td></tr>
+            <tr>
+                <th>计算结果</th>
+                <td>
+                    <button onclick="cal.calculate();">计算</button>
+                </td>
+            </tr>
+            <tr>
+                <td>月还款</td>
+                <td>&yen;<span id="payment" class="output"></span></td>
+            </tr>
+            <tr>
+                <td>总还款</td>
+                <td>&yen;<span id="total" class="output"></span></td>
+            </tr>
+            <tr>
+                <td>总利息</td>
+                <td>&yen;<span id="total-interest" class="output"></span></td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="detail-tbl" cellspacing="0" border="1">
+        </table>
+    </div>
+    <div id="right-wrapper">
+        <h3>累积抵押资产的净值</h3>
+        <canvas id="graph" width="550" height="308"></canvas>
+        <div id="bottom-wrapper">
+            <p><b>Sponsors:</b> <span id="msg">提供以下精选贷款者供参考</span></p>
+            <ul id="lenders">
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+</body>
+<script src="../js/cal.js"></script>
+<script>
+    cal.getStorage();
+</script>
+</html>

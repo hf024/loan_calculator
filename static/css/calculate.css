@@ -1,0 +1,60 @@
+body {
+    display: flex;
+}
+
+table th {
+    text-align: right;
+    padding-right: 20px;
+}
+
+table td {
+    height: 30px;
+}
+
+button {
+    width: 80px;
+    font-size: 16px;
+    /*-webkit-appearance: button;*/
+}
+
+canvas {
+    border: 1px solid;
+}
+
+h3 {
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+#wrapper {
+    margin: 0 auto;
+}
+
+#left-wrapper, #right-wrapper {
+    float: left;
+}
+
+#left-wrapper {
+    margin-right: 40px;
+}
+
+.clear {
+    clear: both;
+}
+
+#bottom-wrapper {
+    margin: 40px 0 0;
+}
+
+#msg {
+    margin-left: 60px;
+}
+
+#bottom-wrapper ul {
+    margin-left: 120px;
+}
+
+#detail-tblth,td{
+    width:100px;
+    height: 40px;
+}
